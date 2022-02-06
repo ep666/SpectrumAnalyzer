@@ -5,6 +5,6 @@
     <QtLastBackgroundBuild>2022-02-06T16:24:00.8309080Z</QtLastBackgroundBuild>
   </PropertyGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <QtLastBackgroundBuild>2022-02-06T16:23:26.1531303Z</QtLastBackgroundBuild>
+    <QtLastBackgroundBuild>2022-02-06T17:00:03.6061161Z</QtLastBackgroundBuild>
   </PropertyGroup>
 </Project>
