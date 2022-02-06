@@ -32,7 +32,6 @@ SpectrumAnalyzer::SpectrumAnalyzer(QWidget* parent)
 
 	m_pcpBaseSignal = new QCustomPlot();
 	m_pcpBaseSignal->addGraph();
-	m_pcpBaseSignal->addGraph();
 	m_pcpBaseSignal->plotLayout()->insertRow(0);
 	m_pcpBaseSignal->plotLayout()->addElement(0, 0,
 		new QCPTextElement(m_pcpBaseSignal, "Base signal", QFont("arial", 8, QFont::Courier)));
@@ -139,9 +138,6 @@ void SpectrumAnalyzer::printBaseSignal()
 	m_pcpBaseSignal->graph(0)->setData(x, yReal);
 	m_pcpBaseSignal->graph(0)->setPen(QPen(Qt::blue));
 	m_pcpBaseSignal->graph(0)->rescaleAxes();
-	m_pcpBaseSignal->graph(1)->setData(x, yImag);
-	m_pcpBaseSignal->graph(1)->setPen(QPen(Qt::red));
-	m_pcpBaseSignal->graph(1)->rescaleAxes(true);
 	m_pcpBaseSignal->replot();
 }
 
@@ -319,6 +315,7 @@ void SpectrumAnalyzer::hilbertTransform()
 
 	m_baseSignal = out;
 	m_currentSignal = out;
+
 	prepareCurrentSignal();
 	printCurrentSignal();
 
